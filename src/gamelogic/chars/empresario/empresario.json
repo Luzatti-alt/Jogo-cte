@@ -7,112 +7,34 @@
     {
       "id": 1,
       "fala": "A fábrica da cidade está produzindo muito, mas também está poluindo o rio. devemos instalar filtros ecológicos?",
-      "opcoes": [
-        {
+      "opcoes": [{
           "texto": "Use o aquífero com moderação e instale captação de chuva.",
           "efeitos": {
             "aumenta": [{"tipo": "ambiental", "quantidade": 12}, {"tipo": "social", "quantidade": 5}],
             "diminui": [{"tipo": "economico", "quantidade": 8}]
-          },
-          "proxima_fala": 2
-        },
+          }},
         {
           "texto": "Use o aquífero ao máximo, a colheita não pode esperar.",
           "efeitos": {
             "aumenta": [{"tipo": "economico", "quantidade": 18}],
             "diminui": [{"tipo": "ambiental", "quantidade": 20}, {"tipo": "social", "quantidade": 5}]
-          },
-          "proxima_fala": 3
-        },
-        {
-          "texto": "Deixe o campo descansar essa temporada.",
-          "efeitos": {
-            "aumenta": [{"tipo": "ambiental", "quantidade": 20}],
-            "diminui": [{"tipo": "economico", "quantidade": 15}]
-          },
-          "proxima_fala": 4
-        }
-      ]
+          }}]
     },
     {
-      "id": 2,
-      "fala": "Faz sentido. Mas a captação de chuva custa caro pra montar. O governo devia subsidiar isso, não acha?",
-      "opcoes": [
-        {
-          "texto": "Sim, pressione a prefeitura por subsídios.",
+        "id": 2,
+      "fala": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahhhhhhhhhhhhhhhhhh",
+      "opcoes": [{
+          "texto": "Use o aquífero com moderação e instale captação de chuva.",
           "efeitos": {
-            "aumenta": [{"tipo": "social", "quantidade": 10}],
-            "diminui": [{"tipo": "economico", "quantidade": 5}]
-          },
-          "proxima_fala": 5
-        },
+            "aumenta": [{"tipo": "ambiental", "quantidade": 12}, {"tipo": "social", "quantidade": 5}],
+            "diminui": [{"tipo": "economico", "quantidade": 8}]
+          }},
         {
-          "texto": "Melhor buscar crédito rural no banco.",
+          "texto": "Use o aquífero ao máximo, a colheita não pode esperar.",
           "efeitos": {
-            "aumenta": [{"tipo": "economico", "quantidade": 8}],
-            "diminui": [{"tipo": "social", "quantidade": 5}]
-          },
-          "proxima_fala": 5
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "fala": "Colhi bastante, mas o poço do vizinho secou depois. Ele tá furioso comigo. Como resolvo isso?",
-      "opcoes": [
-        {
-          "texto": "Compartilhe parte da sua colheita com ele.",
-          "efeitos": {
-            "aumenta": [{"tipo": "social", "quantidade": 15}],
-            "diminui": [{"tipo": "economico", "quantidade": 10}]
-          },
-          "proxima_fala": 5
-        },
-        {
-          "texto": "Ignore, cada um cuida do seu.",
-          "efeitos": {
-            "aumenta": [],
-            "diminui": [{"tipo": "social", "quantidade": 15}]
-          },
-          "proxima_fala": 5
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "fala": "Descansar o campo é difícil financeiramente. Posso usar esse tempo pra reflorestar a beira do rio?",
-      "opcoes": [
-        {
-          "texto": "Sim, refloreste — vai proteger o solo e o rio.",
-          "efeitos": {
-            "aumenta": [{"tipo": "ambiental", "quantidade": 18}, {"tipo": "social", "quantidade": 8}],
-            "diminui": [{"tipo": "economico", "quantidade": 5}]
-          },
-          "proxima_fala": 5
-        },
-        {
-          "texto": "Não vale o esforço, espere a próxima chuva.",
-          "efeitos": {
-            "aumenta": [],
-            "diminui": [{"tipo": "ambiental", "quantidade": 5}]
-          },
-          "proxima_fala": 5
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "fala": "Agradeço o conselho. A vida no campo não é fácil, mas vou tentar fazer o melhor pela terra e pela comunidade.",
-      "opcoes": [
-        {
-          "texto": "Boa sorte, fazendeiro.",
-          "efeitos": {
-            "aumenta": [{"tipo": "social", "quantidade": 3}],
-            "diminui": []
-          },
-          "proxima_fala": null
-        }
-      ]
+            "aumenta": [{"tipo": "economico", "quantidade": 18}],
+            "diminui": [{"tipo": "ambiental", "quantidade": 20}, {"tipo": "social", "quantidade": 5}]
+          }}] 
     }
   ]
 }
