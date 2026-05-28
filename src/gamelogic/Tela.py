@@ -26,7 +26,7 @@ class Jogo:
         self.running = True
         self.player  = Player()
         self.hud     = HUD(screen)
-        self.npcs    = GerenciadorNPCs("empresario")
+        self.npcs    = GerenciadorNPCs("empresario", "fazendeiro") #lista npcs
         self.font    = pygame.font.SysFont(None, 26)
         self.font_op = pygame.font.SysFont(None, 22)
 
@@ -65,6 +65,7 @@ class Jogo:
             self.player.update(item["tipo"], +item["quantidade"])
         for item in efeitos.get("diminui", []):
             self.player.update(item["tipo"], -item["quantidade"])
+        self.npcs.proximo()
 
     def update(self):
         pass
