@@ -1,0 +1,68 @@
+{
+  "sprite": {
+    "nome": "startup",
+    "imagem": "sprites/PLACEHOARDER.png"
+  },
+  "dialogos": [
+    {
+      "id": 1,
+      "fala": "App de coleta seletiva com gamificação — cidadão agenda coleta, acumula pontos e troca por descontos no comércio. Cobre 60% dos custos com publicidade. A prefeitura entra com a logística. Engajamento ambiental não precisa de culpa. Precisa de incentivo certo.",
+      "opcoes": [
+        {
+          "texto": "Aprovar parceria com o app.",
+          "efeitos": {
+            "aumenta": [{"tipo": "ambiental", "quantidade": 6}, {"tipo": "social", "quantidade": 4}],
+            "diminui": [{"tipo": "economico", "quantidade": 3}]
+          }
+        },
+        {
+          "texto": "Recusar, app privado em serviço público é risco.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "ambiental", "quantidade": 3}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fala": "Painéis solares em 1.200 telhados de habitações populares formando microrredes cooperativas — redução de 60% na conta de luz. A comunidade é dona dos painéis. Investimento inicial de R$ 14 milhões. Energia limpa que gera renda para quem menos tem — isso é transição justa.",
+      "opcoes": [
+        {
+          "texto": "Aprovar as microrredes solares.",
+          "efeitos": {
+            "aumenta": [{"tipo": "ambiental", "quantidade": 8}, {"tipo": "social", "quantidade": 7}],
+            "diminui": [{"tipo": "economico", "quantidade": 9}]
+          }
+        },
+        {
+          "texto": "Reduzir escopo para 300 telhados.",
+          "efeitos": {
+            "aumenta": [{"tipo": "ambiental", "quantidade": 4}, {"tipo": "social", "quantidade": 3}],
+            "diminui": [{"tipo": "economico", "quantidade": 4}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fala": "Converter 60% dos resíduos orgânicos da cidade em biogás para frotas municipais. A planta se paga em 7 anos. Requer 4 hectares e coleta seletiva de orgânicos. Lixo que vira energia é o negócio mais honesto que existe.",
+      "opcoes": [
+        {
+          "texto": "Aprovar a usina de biogás.",
+          "efeitos": {
+            "aumenta": [{"tipo": "ambiental", "quantidade": 9}, {"tipo": "social", "quantidade": 3}],
+            "diminui": [{"tipo": "economico", "quantidade": 8}]
+          }
+        },
+        {
+          "texto": "Recusar, impacto de odores é inaceitável.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "ambiental", "quantidade": 4}]
+          }
+        }
+      ]
+    }
+  ]
+}

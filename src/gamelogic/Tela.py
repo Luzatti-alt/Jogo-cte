@@ -26,7 +26,7 @@ class Jogo:
         self.running = True
         self.player  = Player()
         self.hud     = HUD(screen)
-        self.npcs    = GerenciadorNPCs("empresario", "fazendeiro") #lista npcs
+        self.npcs    = GerenciadorNPCs("gestor_federal","cientista","diretor_saude","dona_conceicao","startup","jornalista","secretaria_ambiental","empresario", "fazendeiro") #lista npcs
         self.font    = pygame.font.SysFont(None, 26)
         self.font_op = pygame.font.SysFont(None, 22)
 

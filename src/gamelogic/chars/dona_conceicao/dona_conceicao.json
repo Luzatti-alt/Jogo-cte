@@ -1,0 +1,88 @@
+{
+  "sprite": {
+    "nome": "dona_conceicao",
+    "imagem": "sprites/PLACEHOARDER.png"
+  },
+  "dialogos": [
+    {
+      "id": 1,
+      "fala": "Famílias do Bairro Norte pagam proporcionalmente três vezes mais por água do que o centro por ineficiência da rede. Peço tarifa social subsidiada pela prefeitura. Água é direito. Na periferia, ela vira luxo sem que ninguém perceba.",
+      "opcoes": [
+        {
+          "texto": "Implementar a tarifa social de água.",
+          "efeitos": {
+            "aumenta": [{"tipo": "social", "quantidade": 8}],
+            "diminui": [{"tipo": "economico", "quantidade": 5}]
+          }
+        },
+        {
+          "texto": "Encaminhar estudo de viabilidade.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "social", "quantidade": 4}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fala": "Proposta de conselho com representantes de bairros para participar das decisões de orçamento e obras. A prefeitura perderia autonomia em 30% dos investimentos — mas ganharia legitimidade. Gestão que não ouve erra com eficiência.",
+      "opcoes": [
+        {
+          "texto": "Criar o conselho de participação popular.",
+          "efeitos": {
+            "aumenta": [{"tipo": "social", "quantidade": 9}, {"tipo": "ambiental", "quantidade": 2}],
+            "diminui": [{"tipo": "economico", "quantidade": 4}]
+          }
+        },
+        {
+          "texto": "Recusar, decisões precisam ser ágeis.",
+          "efeitos": {
+            "aumenta": [{"tipo": "economico", "quantidade": 2}],
+            "diminui": [{"tipo": "social", "quantidade": 6}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fala": "100 famílias em área de risco de deslizamento precisam ser relocadas. Podemos construir habitação social no bairro de origem ou oferecer indenização em dinheiro. Dinheiro não compra comunidade, prefeito.",
+      "opcoes": [
+        {
+          "texto": "Construir habitação social no bairro.",
+          "efeitos": {
+            "aumenta": [{"tipo": "social", "quantidade": 10}, {"tipo": "ambiental", "quantidade": 4}],
+            "diminui": [{"tipo": "economico", "quantidade": 12}]
+          }
+        },
+        {
+          "texto": "Oferecer indenização em dinheiro.",
+          "efeitos": {
+            "aumenta": [{"tipo": "ambiental", "quantidade": 6}],
+            "diminui": [{"tipo": "social", "quantidade": 4}, {"tipo": "economico", "quantidade": 6}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fala": "Banco de sementes nativas com agricultores familiares da região. A prefeitura cede espaço e assessoria técnica. Proteção de variedades que o agronegócio convencional está substituindo. Semente que some não volta.",
+      "opcoes": [
+        {
+          "texto": "Apoiar o banco de sementes.",
+          "efeitos": {
+            "aumenta": [{"tipo": "ambiental", "quantidade": 6}, {"tipo": "social", "quantidade": 4}],
+            "diminui": [{"tipo": "economico", "quantidade": 2}]
+          }
+        },
+        {
+          "texto": "Não é responsabilidade municipal.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "ambiental", "quantidade": 3}, {"tipo": "social", "quantidade": 3}]
+          }
+        }
+      ]
+    }
+  ]
+}

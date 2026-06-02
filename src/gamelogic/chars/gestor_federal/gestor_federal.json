@@ -1,0 +1,108 @@
+{
+  "sprite": {
+    "nome": "gestor_federal",
+    "imagem": "sprites/PLACEHOARDER.png"
+  },
+  "dialogos": [
+    {
+      "id": 1,
+      "fala": "A pior seca em 50 anos reduziu o reservatório para 28% da capacidade. O governo federal decretou emergência hídrica. A janela para agir sem racionamento é de 60 dias. Depois disso, o custo político é inevitável.",
+      "opcoes": [
+        {
+          "texto": "Racionamento imediato com campanha de conscientização.",
+          "efeitos": {
+            "aumenta": [{"tipo": "ambiental", "quantidade": 5}],
+            "diminui": [{"tipo": "social", "quantidade": 6}, {"tipo": "economico", "quantidade": 4}]
+          }
+        },
+        {
+          "texto": "Captação alternativa emergencial com poços artesianos.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "economico", "quantidade": 9}, {"tipo": "ambiental", "quantidade": 6}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fala": "O programa federal disponibiliza 40 ônibus elétricos para cidades com infraestrutura de recarga. Quem plantou no mandato passado colhe agora. Quem não plantou paga mais caro.",
+      "opcoes": [
+        {
+          "texto": "Participar do edital federal.",
+          "efeitos": {
+            "aumenta": [{"tipo": "ambiental", "quantidade": 10}, {"tipo": "social", "quantidade": 5}, {"tipo": "economico", "quantidade": 8}],
+            "diminui": []
+          }
+        },
+        {
+          "texto": "Não participar, infraestrutura é insuficiente.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "social", "quantidade": 2}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fala": "Recessão nacional elevou o desemprego para 14,8%. O governo federal não tem recursos para transferir. A pressão social é máxima. Crises nacionais chegam primeiro nas cidades.",
+      "opcoes": [
+        {
+          "texto": "Flexibilizar regulação ambiental para atrair investimento.",
+          "efeitos": {
+            "aumenta": [{"tipo": "economico", "quantidade": 6}, {"tipo": "social", "quantidade": 3}],
+            "diminui": [{"tipo": "ambiental", "quantidade": 8}]
+          }
+        },
+        {
+          "texto": "Manter padrões e criar renda emergencial municipal.",
+          "efeitos": {
+            "aumenta": [{"tipo": "social", "quantidade": 5}, {"tipo": "ambiental", "quantidade": 3}],
+            "diminui": [{"tipo": "economico", "quantidade": 5}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fala": "O governo federal lança programa de R$ 120 milhões para cidades com gestão ambiental comprovada. O programa premia gestão, não promessa. O que o mandato anterior deixou vai determinar o que esse mandato pode receber.",
+      "opcoes": [
+        {
+          "texto": "Concorrer ao programa federal.",
+          "efeitos": {
+            "aumenta": [{"tipo": "economico", "quantidade": 15}, {"tipo": "ambiental", "quantidade": 8}, {"tipo": "social", "quantidade": 5}],
+            "diminui": []
+          }
+        },
+        {
+          "texto": "Não concorrer, documentação está incompleta.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "social", "quantidade": 2}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "fala": "Edital federal oferece co-financiamento para UMA opção: ampliar o aeroporto regional ou implantar BRT integrado para 280 mil usuários diários. A escolha diz muito sobre para quem essa gestão governa.",
+      "opcoes": [
+        {
+          "texto": "Ampliar o aeroporto regional.",
+          "efeitos": {
+            "aumenta": [{"tipo": "economico", "quantidade": 12}],
+            "diminui": [{"tipo": "social", "quantidade": 3}, {"tipo": "ambiental", "quantidade": 5}]
+          }
+        },
+        {
+          "texto": "Implantar BRT urbano integrado.",
+          "efeitos": {
+            "aumenta": [{"tipo": "social", "quantidade": 11}, {"tipo": "ambiental", "quantidade": 5}],
+            "diminui": [{"tipo": "economico", "quantidade": 4}]
+          }
+        }
+      ]
+    }
+  ]
+}

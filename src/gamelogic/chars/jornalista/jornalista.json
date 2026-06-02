@@ -1,0 +1,48 @@
+{
+  "sprite": {
+    "nome": "jornalista",
+    "imagem": "sprites/PLACEHOARDER.png"
+  },
+  "dialogos": [
+    {
+      "id": 1,
+      "fala": "Obtive dados mostrando que o índice real de poluição atmosférica é 40% acima do divulgado. Dou 48 horas antes de publicar. O dado é público por lei. Eu publico com ou sem declaração. A diferença é o seu lado da história.",
+      "opcoes": [
+        {
+          "texto": "Divulgar proativamente com plano de ação.",
+          "efeitos": {
+            "aumenta": [{"tipo": "social", "quantidade": 7}, {"tipo": "ambiental", "quantidade": 3}],
+            "diminui": [{"tipo": "economico", "quantidade": 5}]
+          }
+        },
+        {
+          "texto": "Negociar controle da narrativa com a assessoria.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "social", "quantidade": 9}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fala": "Publiquei investigação mostrando sobrepreço de 40% nos contratos de limpeza urbana. A empresa contratada tem sócios próximos a aliados políticos. A câmara instala CPI. Os documentos são públicos. A pergunta é o que o prefeito sabia.",
+      "opcoes": [
+        {
+          "texto": "Anular contratos e colaborar com a CPI.",
+          "efeitos": {
+            "aumenta": [{"tipo": "social", "quantidade": 6}],
+            "diminui": [{"tipo": "economico", "quantidade": 8}]
+          }
+        },
+        {
+          "texto": "Defender contratos com base em regularidade formal.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "social", "quantidade": 12}, {"tipo": "economico", "quantidade": 3}]
+          }
+        }
+      ]
+    }
+  ]
+}

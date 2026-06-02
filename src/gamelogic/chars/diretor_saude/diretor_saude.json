@@ -1,0 +1,88 @@
+{
+  "sprite": {
+    "nome": "diretor_saude",
+    "imagem": "sprites/PLACEHOARDER.png"
+  },
+  "dialogos": [
+    {
+      "id": 1,
+      "fala": "Uma viga cedeu no teto de uma escola periférica. Três crianças feridas. O laudo de risco era conhecido há dois anos. A imprensa questiona as prioridades de obras. Tínhamos o laudo. Não tínhamos a ordem de serviço.",
+      "opcoes": [
+        {
+          "texto": "Assumir responsabilidade e lançar programa de reformas.",
+          "efeitos": {
+            "aumenta": [{"tipo": "social", "quantidade": 6}],
+            "diminui": [{"tipo": "economico", "quantidade": 10}]
+          }
+        },
+        {
+          "texto": "Atribuir à gestão anterior e abrir investigação.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "social", "quantidade": 8}, {"tipo": "economico", "quantidade": 3}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fala": "Três semanas de calor extremo causaram 47 mortes em grupos vulneráveis. Falta de áreas verdes e código de obras flexibilizado contribuíram. Cada decisão que tomamos tem um rosto, prefeito. Essa semana eu vi 47.",
+      "opcoes": [
+        {
+          "texto": "Centro de resfriamento emergencial e revisão do código de obras.",
+          "efeitos": {
+            "aumenta": [{"tipo": "social", "quantidade": 8}, {"tipo": "ambiental", "quantidade": 3}],
+            "diminui": [{"tipo": "economico", "quantidade": 11}]
+          }
+        },
+        {
+          "texto": "Ação assistencial pontual sem mudança estrutural.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "social", "quantidade": 5}, {"tipo": "economico", "quantidade": 4}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fala": "Ansiedade e depressão cresceram 38% em 3 anos, com correlação com poluição sonora, falta de verde e insegurança. Proponho programa integrado de saúde mental com componente ambiental. A cidade adoece as pessoas de formas que não aparecem nos indicadores clássicos.",
+      "opcoes": [
+        {
+          "texto": "Aprovar o programa de saúde mental urbana.",
+          "efeitos": {
+            "aumenta": [{"tipo": "social", "quantidade": 9}, {"tipo": "ambiental", "quantidade": 3}],
+            "diminui": [{"tipo": "economico", "quantidade": 6}]
+          }
+        },
+        {
+          "texto": "Encaminhar para análise orçamentária.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "social", "quantidade": 4}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fala": "Um caminhão com reagentes industriais tombou na Av. Principal. A pluma de fumaça atingiu quatro bairros. O protocolo de emergência química não é atualizado desde 1998. Nossa capacidade de resposta foi projetada para 1998.",
+      "opcoes": [
+        {
+          "texto": "Ativar defesa civil e bombeiros estaduais.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "social", "quantidade": 4}, {"tipo": "economico", "quantidade": 7}, {"tipo": "ambiental", "quantidade": 5}]
+          }
+        },
+        {
+          "texto": "Resposta municipal com recursos próprios.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "social", "quantidade": 14}, {"tipo": "economico", "quantidade": 5}, {"tipo": "ambiental", "quantidade": 8}]
+          }
+        }
+      ]
+    }
+  ]
+}

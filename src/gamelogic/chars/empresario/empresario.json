@@ -6,35 +6,103 @@
   "dialogos": [
     {
       "id": 1,
-      "fala": "A fábrica da cidade está produzindo muito, mas também está poluindo o rio. devemos instalar filtros ecológicos?",
-      "opcoes": [{
-          "texto": "Use o aquífero com moderação e instale captação de chuva.",
-          "efeitos": {
-            "aumenta": [{"tipo": "ambiental", "quantidade": 12}, {"tipo": "social", "quantidade": 5}],
-            "diminui": [{"tipo": "economico", "quantidade": 8}]
-          }},
+      "fala": "A câmara de comércio propõe transformar a Praça Central em estacionamento pago. Elimina a feira livre de 40 anos e 180 feirantes. Turismo de compras é a maior fonte de renda do centro histórico. Carros trazem dinheiro.",
+      "opcoes": [
         {
-          "texto": "Use o aquífero ao máximo, a colheita não pode esperar.",
+          "texto": "Aprovar o estacionamento.",
           "efeitos": {
-            "aumenta": [{"tipo": "economico", "quantidade": 18}],
-            "diminui": [{"tipo": "ambiental", "quantidade": 20}, {"tipo": "social", "quantidade": 5}]
-          }}]
+            "aumenta": [{"tipo": "economico", "quantidade": 6}],
+            "diminui": [{"tipo": "social", "quantidade": 7}]
+          }
+        },
+        {
+          "texto": "Manter a feira livre.",
+          "efeitos": {
+            "aumenta": [{"tipo": "social", "quantidade": 7}],
+            "diminui": [{"tipo": "economico", "quantidade": 6}]
+          }
+        }
+      ]
     },
     {
-        "id": 2,
-      "fala": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahhhhhhhhhhhhhhhhhh",
-      "opcoes": [{
-          "texto": "Use o aquífero com moderação e instale captação de chuva.",
-          "efeitos": {
-            "aumenta": [{"tipo": "ambiental", "quantidade": 12}, {"tipo": "social", "quantidade": 5}],
-            "diminui": [{"tipo": "economico", "quantidade": 8}]
-          }},
+      "id": 2,
+      "fala": "Um festival gastronômico sustentável com produtores locais. A prefeitura cede espaço; organizadores ficam com a bilheteria. Projeção: R$ 4 milhões de impacto. Sustentabilidade que dá lucro é sustentabilidade que dura.",
+      "opcoes": [
         {
-          "texto": "Use o aquífero ao máximo, a colheita não pode esperar.",
+          "texto": "Apoiar o festival.",
           "efeitos": {
-            "aumenta": [{"tipo": "economico", "quantidade": 18}],
-            "diminui": [{"tipo": "ambiental", "quantidade": 20}, {"tipo": "social", "quantidade": 5}]
-          }}] 
+            "aumenta": [{"tipo": "economico", "quantidade": 7}, {"tipo": "social", "quantidade": 5}, {"tipo": "ambiental", "quantidade": 2}],
+            "diminui": []
+          }
+        },
+        {
+          "texto": "Recusar, não é prioridade agora.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "social", "quantidade": 3}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fala": "Um grupo quer construir shopping no terreno do antigo mercado público. A alternativa é revitalizar o mercado com feirantes. Shopping gera 10x mais IPTU e 800 empregos com carteira. O mercado é saudade.",
+      "opcoes": [
+        {
+          "texto": "Ceder terreno para o shopping.",
+          "efeitos": {
+            "aumenta": [{"tipo": "economico", "quantidade": 10}],
+            "diminui": [{"tipo": "social", "quantidade": 5}, {"tipo": "ambiental", "quantidade": 3}]
+          }
+        },
+        {
+          "texto": "Revitalizar o mercado público.",
+          "efeitos": {
+            "aumenta": [{"tipo": "social", "quantidade": 8}, {"tipo": "ambiental", "quantidade": 2}],
+            "diminui": [{"tipo": "economico", "quantidade": 3}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fala": "Três empresas anunciam relocação para cidade vizinha com isenção fiscal de 10 anos e menos regulação ambiental. Doze outras estão em análise. Ou a gente compete, ou a gente perde.",
+      "opcoes": [
+        {
+          "texto": "Criar incentivos fiscais para reter empresas.",
+          "efeitos": {
+            "aumenta": [{"tipo": "economico", "quantidade": 8}],
+            "diminui": [{"tipo": "ambiental", "quantidade": 6}]
+          }
+        },
+        {
+          "texto": "Manter padrões e buscar empresas alinhadas.",
+          "efeitos": {
+            "aumenta": [{"tipo": "social", "quantidade": 4}, {"tipo": "ambiental", "quantidade": 3}],
+            "diminui": [{"tipo": "economico", "quantidade": 6}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "fala": "Isenção de IPTU por 5 anos para imóveis com padrão de construção sustentável certificado. O mercado sinalizou interesse. A receita perdida se compensa em 8 anos. Sustentabilidade que dá desconto vira moda mais rápido.",
+      "opcoes": [
+        {
+          "texto": "Aprovar a isenção fiscal verde.",
+          "efeitos": {
+            "aumenta": [{"tipo": "ambiental", "quantidade": 7}, {"tipo": "social", "quantidade": 3}],
+            "diminui": [{"tipo": "economico", "quantidade": 4}]
+          }
+        },
+        {
+          "texto": "Recusar, prejuízo fiscal imediato é alto.",
+          "efeitos": {
+            "aumenta": [{"tipo": "economico", "quantidade": 2}],
+            "diminui": [{"tipo": "ambiental", "quantidade": 3}]
+          }
+        }
+      ]
     }
   ]
 }
