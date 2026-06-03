@@ -1,7 +1,7 @@
 {
   "sprite": {
     "nome": "jornalista",
-    "imagem": "sprites/PLACEHOARDER.png"
+    "imagem": "sprites/jornalista.png"
   },
   "dialogos": [
     {

@@ -6,29 +6,51 @@ CORES = {
     "social":    (80, 140, 220),
     "economico": (220, 180, 50),
 }
+IconsPath = {
+    "social": "src/gui/social.png",
+    "ambiental": "src/gui/ambiente.png",
+    "economico": "src/gui/economico.png",
+}
+ICON_SIZE = 64
 
 class HUD:
     def __init__(self, screen):
         self.screen = screen
         self.font   = pygame.font.SysFont(None, 22)
+        self.icons  = {}
+
+        for nome, path in IconsPath.items():
+            img = pygame.image.load(path).convert()
+            self.icons[nome] = pygame.transform.scale(img, (ICON_SIZE, ICON_SIZE))
+            img.set_colorkey((0, 0, 0))  # torna o preto transparente
+
 
     def draw(self, atributos):
         W, H = self.screen.get_size()
 
-        largura_barra = int(W * 0.18)
-        espacamento   = W // 3
-        x_inicio      = espacamento // 2 - largura_barra // 2
-        y             = int(H * 0.03)
+        espacamento = W // 3
+        x_inicio    = espacamento // 2 - ICON_SIZE // 2
+        y           = int(H * 0.02)
 
         for i, (nome, valor) in enumerate(atributos.items()):
-            x = x_inicio + i * espacamento
+            x    = x_inicio + i * espacamento
+            icon = self.icons[nome]
+            cor  = CORES[nome]
 
-            label = self.font.render(nome.capitalize(), True, (220, 220, 220))
-            self.screen.blit(label, (x, y))
+            # quantos pixels do ícone ficam visíveis (de baixo pra cima)
+            fill_px  = int(ICON_SIZE * valor / 100)
+            empty_px = ICON_SIZE - fill_px
 
-            pygame.draw.rect(self.screen, (60, 60, 60),
-                             (x, y + 18, largura_barra, 10), border_radius=4)
+            # parte preenchida: recorta só os pixels de baixo (fill_px altura)
+            if fill_px > 0:
+                parte_cheia = icon.subsurface(
+                    pygame.Rect(0, empty_px, ICON_SIZE, fill_px)
+                ).copy()
+                # coloriza com a cor do atributo
+                parte_cheia.fill((*cor, 255), special_flags=pygame.BLEND_RGBA_MULT)
+                self.screen.blit(parte_cheia, (x, y + empty_px))
 
-            preenchimento = int(largura_barra * valor / 100)
-            pygame.draw.rect(self.screen, CORES[nome],
-                             (x, y + 18, preenchimento, 10), border_radius=4)
+            # porcentagem abaixo do ícone
+            txt = self.font.render(f"{valor}%", True, (220, 220, 220))
+            self.screen.blit(txt, (x + ICON_SIZE // 2 - txt.get_width() // 2,
+                                   y + ICON_SIZE + 4))

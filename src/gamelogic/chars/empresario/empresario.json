@@ -1,7 +1,7 @@
 {
   "sprite": {
     "nome": "empresario",
-    "imagem": "sprites/PLACEHOARDER.png"
+    "imagem": "sprites/empresario.png"
   },
   "dialogos": [
     {

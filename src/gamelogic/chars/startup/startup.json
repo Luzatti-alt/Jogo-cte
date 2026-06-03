@@ -1,7 +1,7 @@
 {
   "sprite": {
     "nome": "startup",
-    "imagem": "sprites/PLACEHOARDER.png"
+    "imagem": "sprites/startup.png"
   },
   "dialogos": [
     {

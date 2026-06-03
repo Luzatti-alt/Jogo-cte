@@ -1,7 +1,7 @@
 {
   "sprite": {
     "nome": "diretor_saude",
-    "imagem": "sprites/PLACEHOARDER.png"
+    "imagem": "sprites/diretor.png"
   },
   "dialogos": [
     {
