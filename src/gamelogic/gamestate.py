@@ -17,3 +17,28 @@ class RNG():
         if not opcoes:
             return None
         return rng.choice(opcoes)
+
+class Turno():
+    def __init__(self):
+        global turno
+        self.turno = turno
+    
+    def ProximoTurno(self):
+        global turno
+        turno += 1 
+        self.turno = turno
+        return int(self.turno)
+    
+    def VerTurno(self):
+        global turno
+        return int(self.turno)
+
+class Finais():
+    def __init__(self):
+        pass
+    def Bad_ending(self):
+        pass
+    def Good_ending(self):
+        pass
+    def Neutral_ending(self):
+        pass

@@ -2,6 +2,7 @@ import pygame
 from src.gamelogic.player import Player
 from src.gamelogic.hud import HUD
 from src.gamelogic.npcs import Npc, Dialogo, GerenciadorNPCs
+from src.gamelogic.gamestate import Turno
 
 
 def wrap_text(texto, font, max_largura):
@@ -66,6 +67,12 @@ class Jogo:
         for item in efeitos.get("diminui", []):
             self.player.update(item["tipo"], -item["quantidade"])
         self.npcs.proximo()
+        #atualizar turno
+        Turno().ProximoTurno()
+        TurnoAtual = Turno().VerTurno()
+        if (int(TurnoAtual) > 10):
+            print("indo para fim")
+            #ver os finais
 
     def update(self):
         pass
@@ -78,15 +85,15 @@ class Jogo:
 
         self.hud.draw(self.player.get_stats())
 
+        npc_y = int(H * 0.40)
         npc_h = int(H * 0.40)
-        npc_w = int(npc_h * (npc.imagem.get_width() / npc.imagem.get_height()))
+        npc_w  = int(npc_h * (npc.imagem.get_width() / npc.imagem.get_height()))
         img   = pygame.transform.scale(npc.imagem, (npc_w, npc_h))
-        self.screen.blit(img, (W // 2 - npc_w // 2, int(H * 0.35)))
-
+        self.screen.blit(img, (W // 2 - npc_w // 2, npc_y))
         caixa_w = int(W * 0.80)
         caixa_x = W // 2 - caixa_w // 2
-        caixa_y = int(H * 0.12)
-        linhas  = wrap_text(npc.dialog.texto(), self.font, caixa_w - 20)
+        caixa_y = int(H * 0.18)
+        linhas  = wrap_text(npc.dialog.texto(), self.font, caixa_w)
         caixa_h = len(linhas) * 28 + 20
         pygame.draw.rect(self.screen, (240, 230, 190),
                          (caixa_x, caixa_y, caixa_w, caixa_h), border_radius=8)
@@ -97,21 +104,30 @@ class Jogo:
             self.screen.blit(surf, (caixa_x + 10, caixa_y + 10 + i * 28))
 
         opcoes = npc.dialog.opcoes()
-        op_y   = int(H * 0.78)
+        op_y   = int(H * 0.86)
         op_w   = int(W * 0.35)
         op_h   = int(H * 0.10)
 
         if len(opcoes) > 0:
             pygame.draw.rect(self.screen, (80, 60, 30),
                              (10, op_y, op_w, op_h), border_radius=6)
-            seta = self.font.render("← " + opcoes[0]["texto"], True, (240, 220, 160))
-            self.screen.blit(seta, (20, op_y + op_h // 2 - 10))
+            linhas_op = wrap_text(opcoes[0]["texto"], self.font_op, op_w - 20)
+            total_h   = len(linhas_op) * 24
+            y_txt     = op_y + (op_h - total_h) // 2
+        for linha in linhas_op:
+            surf = self.font_op.render(linha, True, (240, 220, 160))
+            self.screen.blit(surf, (20, y_txt))
+            y_txt += 24
 
         if len(opcoes) > 1:
             op_x2 = W - op_w - 10
             pygame.draw.rect(self.screen, (80, 60, 30),
                              (op_x2, op_y, op_w, op_h), border_radius=6)
-            seta = self.font.render(opcoes[1]["texto"] + " →", True, (240, 220, 160))
-            self.screen.blit(seta, (op_x2 + 10, op_y + op_h // 2 - 10))
-
+            linhas_op = wrap_text(opcoes[1]["texto"], self.font_op, op_w - 20)
+            total_h   = len(linhas_op) * 24
+            y_txt     = op_y + (op_h - total_h) // 2
+        for linha in linhas_op:
+            surf = self.font_op.render(linha, True, (240, 220, 160))
+            self.screen.blit(surf, (op_x2 + 10, y_txt))
+            y_txt += 24
         pygame.display.flip()
