@@ -1,0 +1,40 @@
+{
+  "sprite": {
+    "nome": "fazendeiro",
+    "imagem": "sprites/fazendeiro.png"
+  },
+  "dialogos": [
+    {
+      "id": 1,
+      "fala": "Minha terra tá seca faz meses. Pensei em usar o aquífero subterrâneo pra irrigar, mas dizem que ele tá quase no limite. O que o senhor acha?",
+      "opcoes": [{
+          "texto": "Use o aquífero com moderação e instale captação de chuva.",
+          "efeitos": {
+            "aumenta": [{"tipo": "ambiental", "quantidade": 12}, {"tipo": "social", "quantidade": 5}],
+            "diminui": [{"tipo": "economico", "quantidade": 8}]
+          }},
+        {
+          "texto": "Use o aquífero ao máximo, a colheita não pode esperar.",
+          "efeitos": {
+            "aumenta": [{"tipo": "economico", "quantidade": 18}],
+            "diminui": [{"tipo": "ambiental", "quantidade": 20}, {"tipo": "social", "quantidade": 5}]
+          }}]
+    },
+    {
+      "id": 2,
+      "fala": "Minha terra tá seca faz meses. Pensei em usar o aquífero subterrâneo pra irrigar, mas dizem que ele tá quase no limite. O que o senhor acha?",
+      "opcoes": [{
+          "texto": "Use o aquífero com moderação e instale captação de chuva.",
+          "efeitos": {
+            "aumenta": [{"tipo": "ambiental", "quantidade": 12}, {"tipo": "social", "quantidade": 5}],
+            "diminui": [{"tipo": "economico", "quantidade": 8}]
+          }},
+        {
+          "texto": "Use o aquífero ao máximo, a colheita não pode esperar.",
+          "efeitos": {
+            "aumenta": [{"tipo": "economico", "quantidade": 18}],
+            "diminui": [{"tipo": "ambiental", "quantidade": 20}, {"tipo": "social", "quantidade": 5}]
+          }}]
+    }
+  ]
+}

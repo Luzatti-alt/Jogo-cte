@@ -1,0 +1,88 @@
+{
+  "sprite": {
+    "nome": "cientista",
+    "imagem": "sprites/cientista.png"
+  },
+  "dialogos": [
+    {
+      "id": 1,
+      "fala": "A universidade quer implantar 30 hortas comunitárias em terrenos públicos ociosos, com associações de bairro. Segurança alimentar e educação ambiental, sem custo direto para a prefeitura. Terreno ocioso que produz alimento produz saúde.",
+      "opcoes": [
+        {
+          "texto": "Apoiar o projeto de hortas.",
+          "efeitos": {
+            "aumenta": [{"tipo": "social", "quantidade": 5}, {"tipo": "ambiental", "quantidade": 4}],
+            "diminui": []
+          }
+        },
+        {
+          "texto": "Recusar, terrenos têm outro uso previsto.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "social", "quantidade": 3}, {"tipo": "ambiental", "quantidade": 2}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fala": "Queremos produzir o primeiro mapa completo de vulnerabilidade climática da cidade — bairros em risco de enchente, calor extremo e contaminação. Trabalho de 18 meses, gratuito. Você não pode proteger o que não consegue ver.",
+      "opcoes": [
+        {
+          "texto": "Autorizar o mapeamento.",
+          "efeitos": {
+            "aumenta": [{"tipo": "ambiental", "quantidade": 5}, {"tipo": "social", "quantidade": 3}],
+            "diminui": []
+          }
+        },
+        {
+          "texto": "Não é prioridade agora.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "ambiental", "quantidade": 3}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fala": "Proposta de integrar sustentabilidade em todas as escolas municipais — em matemática, ciências, história e português. Requer formação de 340 professores. Criança que aprende a pensar sistemicamente vira adulto que vota diferente.",
+      "opcoes": [
+        {
+          "texto": "Aprovar o currículo sustentável.",
+          "efeitos": {
+            "aumenta": [{"tipo": "social", "quantidade": 7}, {"tipo": "ambiental", "quantidade": 2}],
+            "diminui": [{"tipo": "economico", "quantidade": 5}]
+          }
+        },
+        {
+          "texto": "Adiar por falta de orçamento.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "social", "quantidade": 4}]
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fala": "Queremos engajar 3.000 moradores como coletores de dados ambientais usando smartphones — temperatura, qualidade da água, ruído. Os dados alimentariam pesquisa e o monitoramento da cidade. Ciência que passa pela mão do cidadão vira conhecimento que ele defende.",
+      "opcoes": [
+        {
+          "texto": "Apoiar o programa de ciência cidadã.",
+          "efeitos": {
+            "aumenta": [{"tipo": "social", "quantidade": 6}, {"tipo": "ambiental", "quantidade": 5}],
+            "diminui": [{"tipo": "economico", "quantidade": 2}]
+          }
+        },
+        {
+          "texto": "Recusar, dados não validados geram confusão.",
+          "efeitos": {
+            "aumenta": [],
+            "diminui": [{"tipo": "social", "quantidade": 3}]
+          }
+        }
+      ]
+    }
+  ]
+}

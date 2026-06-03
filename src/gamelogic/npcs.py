@@ -1,8 +1,16 @@
+import sys
+
+def resource_path(relative):
+    if getattr(sys, 'frozen', False):
+        return os.path.normpath(os.path.join(sys._MEIPASS, relative))
+    return os.path.normpath(os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "..", "..", relative
+    ))
+
 import json
 import os
 import pygame
 from src.gamelogic.gamestate import RNG
-
 
 class Npc:
     def __init__(self, char):

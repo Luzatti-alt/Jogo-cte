@@ -22,7 +22,10 @@ class Turno():
     def __init__(self):
         global turno
         self.turno = turno
-    
+    def ResetarTurno(self):
+        global turno
+        turno = 0
+        return True
     def ProximoTurno(self):
         global turno
         turno += 1 
@@ -32,13 +35,3 @@ class Turno():
     def VerTurno(self):
         global turno
         return int(self.turno)
-
-class Finais():
-    def __init__(self):
-        pass
-    def Bad_ending(self):
-        pass
-    def Good_ending(self):
-        pass
-    def Neutral_ending(self):
-        pass

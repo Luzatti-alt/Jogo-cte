@@ -1,3 +1,18 @@
+import sys, os
+
+def resource_path(relative):
+    if getattr(sys, 'frozen', False):
+        base = sys._MEIPASS
+    else:
+        base = os.path.dirname(os.path.abspath(__file__))
+        base = os.path.join(base, "..", "..")  # sobe de gamelogic/ para raiz
+    return os.path.normpath(os.path.join(base, relative))
+
+IconsPath = {
+    "social":    resource_path("src/gui/social.png"),
+    "ambiental": resource_path("src/gui/ambiente.png"),
+    "economico": resource_path("src/gui/economico.png"),
+}
 # src/gamelogic/hud.py
 import pygame
 
@@ -5,11 +20,6 @@ CORES = {
     "ambiental": (60, 180, 90),
     "social":    (80, 140, 220),
     "economico": (220, 180, 50),
-}
-IconsPath = {
-    "social": "src/gui/social.png",
-    "ambiental": "src/gui/ambiente.png",
-    "economico": "src/gui/economico.png",
 }
 ICON_SIZE = 64
 

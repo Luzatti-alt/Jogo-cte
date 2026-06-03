@@ -1,0 +1,14 @@
+{
+  "bom": {
+    "titulo": "Um Futuro Possível",
+    "texto": "Suas decisões construíram uma cidade mais justa e sustentável. A população respira melhor, a economia cresceu com responsabilidade e a comunidade se fortaleceu. Você provou que é possível governar para todos."
+  },
+  "neutro": {
+    "titulo": "Equilíbrio Frágil",
+    "texto": "A cidade sobreviveu ao seu mandato. Alguns avanços, alguns recuos. Nenhum desastre, nenhuma transformação. O próximo gestor herda problemas conhecidos e algumas sementes que talvez germinem."
+  },
+  "ruim": {
+    "titulo": "O Preço das Escolhas",
+    "texto": "O desequilíbrio acumulado cobrou sua conta. A população está insatisfeita, o meio ambiente degradado e os cofres no limite. As decisões de curto prazo deixaram uma herança pesada para as próximas gerações."
+  }
+}
